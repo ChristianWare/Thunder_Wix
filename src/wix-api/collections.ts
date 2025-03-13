@@ -10,7 +10,6 @@ export interface Collection {
   // other fields...
 }
 
-
 export const getCollectionBySlug = cache(
   async (wixClient: WixClient, slug: string) => {
     if (!slug) {
@@ -32,6 +31,7 @@ export const getCollections = cache(
       .ne("_id", "00000000-000000-000000-000000000001") // exclude all products
       .ne("_id", "6aab45f0-0c5c-1652-eea3-4e9f0ed352cb") // exclude featured products
       .ne("_id", "67b5cb52-3c01-f0eb-90dd-bbbc2d9f5e14") // exclude new arrivals
+      .ne("_id", "3b6f9255-8c64-a964-61c0-6e9e73d436f6") // exclude best sellers
       .find();
 
     // Normalize data by providing default values for potentially undefined or null fields
