@@ -12,11 +12,13 @@ import FalseButton from "@/components/shared/FalseButton/FalseButton";
 interface Props {
   title: string;
   category: string;
+  reverse?: string;
 }
 
 export default async function DynamicProductCollection({
   title,
   category,
+  reverse='',
 }: Props) {
   const wixClient = await getWixServerClient();
 
@@ -70,7 +72,10 @@ export default async function DynamicProductCollection({
           {featuredProducts.items.map((product) => (
             <ProductCard key={product._id} product={product} />
           ))}
-          <Link href='/shop' className={styles.viewAllParent}>
+          <Link
+            href='/shop'
+            className={`${styles.viewAllParent} ${styles[reverse]}`}
+          >
             <div className={styles.viewAllTop}>
               <span className={styles.viewAllTitle}>View All</span>
               <Arrow className={styles.arrow} />

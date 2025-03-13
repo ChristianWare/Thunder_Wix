@@ -13,7 +13,11 @@ export default function Home() {
         category='featured-products'
       />
       <CategorySection />
-      <DynamicProductCollection title='Best Sellers' category='best-sellers' />
+      <DynamicProductCollection
+        title='Best Sellers'
+        category='best-sellers'
+        reverse='reverse'
+      />
       {/* </Suspense> */}
     </main>
   );
