@@ -1,0 +1,57 @@
+.container {
+  position: relative;
+  z-index: 1;
+  z-index: 998;
+  cursor: pointer;
+}
+
+.btn {
+  z-index: 998;
+  font-family: var(--NeubauGroteskNor);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  border-radius: 4px;
+  user-select: none;
+  display: inline-block;
+  padding: 1rem 5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  transition: all 0.2s ease-in;
+}
+
+.primary {
+  color: var(--white);
+  background-color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.secondary {
+  color: var(--white);
+  border: 1px solid var(--gold);
+  background-color: var(--darkGray);
+  border-radius: 50px;
+}
+
+.secondary:hover {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.navBtn {
+  border-radius: 8px;
+  line-height: 1;
+  padding: 1.7rem 5rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--blue);
+  border: 2px solid var(--black);
+  font-size: 1.2rem;
+  border: 1px solid var(--gray);
+}

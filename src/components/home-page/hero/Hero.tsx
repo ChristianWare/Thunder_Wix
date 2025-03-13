@@ -3,7 +3,7 @@ import LayoutWrapper from "../../shared/LayoutWrapper";
 
 import ScrollHorizontalText from "../../shared/ScrollHorizontalText/ScrollHorizontalText";
 import Thunder from "../../../../public/icons/lightning.svg";
-// import ProductCard from "@/components/shared/ProductCard/ProductCard";
+import DummyProductCard from "@/components/shared/DummyProductCard/DummyProductCard";
 
 export default function Hero() {
   return (
@@ -23,12 +23,9 @@ export default function Hero() {
               <p className={styles.copy}>
                 Your shop for bicycles <br /> and e-bikes in SWitzerland.
               </p>
-              {/* <Button text='test' btnType='primary' href='/' /> */}
             </div>
             <div className={styles.right}>
-              
-                {/* <ProductCard key={product.slug} product={product} /> */}
-              
+              <DummyProductCard />
             </div>
           </div>
         </div>
