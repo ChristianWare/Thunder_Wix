@@ -6,6 +6,8 @@ import Product from "@/components/shared/Product/Product";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import ProductCard from "@/components/shared/ProductCard/ProductCard";
 import Link from "next/link";
+import Arrow from "../../../../public/icons/arrow.svg";
+import FalseButton from "@/components/shared/FalseButton/FalseButton";
 
 export default async function FeaturedProducts() {
   const wixClient = await getWixServerClient();
@@ -57,14 +59,20 @@ export default async function FeaturedProducts() {
       <LayoutWrapper>
         <div className={styles.top}>
           <h2 className={styles.title}>New Arrivals</h2>
-          <Link href='/shop' className={styles.shopAll}>
-            Shop All
-          </Link>
         </div>
         <div className={styles.content}>
           {featuredProducts.items.map((product) => (
             <ProductCard key={product._id} product={product} />
           ))}
+          <Link href='/shop' className={styles.viewAllParent}>
+              <div className={styles.viewAllTop}>
+                <span className={styles.viewAllTitle}>View All</span>
+                <Arrow className={styles.arrow} />
+              </div>
+              <div className={styles.btnContainer}>
+                <FalseButton btnType='secondaryii' text='View Collection' />
+              </div>
+          </Link>
         </div>
       </LayoutWrapper>
     </section>

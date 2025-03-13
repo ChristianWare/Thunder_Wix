@@ -1,14 +1,14 @@
 import FeaturedProducts from "@/components/home-page/FeaturedProducts/FeaturedProducts";
 import Hero from "@/components/home-page/hero/Hero";
-import { Suspense } from "react";
+// import { Suspense } from "react";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Suspense fallback={"Loading..."}>
+      {/* <Suspense fallback={"Loading..."}> */}
         <FeaturedProducts />
-      </Suspense>
+      {/* </Suspense> */}
     </main>
   );
 }

@@ -26,7 +26,7 @@ export default function ProductCard({ product }: Props) {
             alt={mainImage?.altText}
             width={454}
             height={340}
-            scaleToFill={true}
+            scaletofill={true}
             className={styles.img}
           />
           <div className={styles.details}>
@@ -51,7 +51,6 @@ export default function ProductCard({ product }: Props) {
     </article>
   );
 }
-
 
 function getFormattedPrice(product?: products.Product) {
   const minPrice = product?.priceRange?.minValue;

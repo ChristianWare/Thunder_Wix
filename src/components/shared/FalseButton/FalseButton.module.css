@@ -44,6 +44,12 @@
   background-color: var(--white);
 }
 
+.secondaryii {
+  color: var(--white);
+  border: 1px solid var(--gold);
+  background-color: var(--darkGray);
+}
+
 .navBtn {
   border-radius: 8px;
   line-height: 1;
