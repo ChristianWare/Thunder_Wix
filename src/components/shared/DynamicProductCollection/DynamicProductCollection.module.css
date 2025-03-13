@@ -10,6 +10,10 @@
   width: 10%;
 }
 
+.heading {
+  width: 30%;
+}
+
 .shopAll {
   color: var(--red);
   text-decoration: underline;
@@ -96,6 +100,10 @@
 @media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading {
+    width: 100%;
   }
 }
 
