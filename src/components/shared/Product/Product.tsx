@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @next/next/no-img-element */
 import { products } from "@wix/stores";
 import Link from "next/link";
-import WixImage from "../WixImage";
+import WixImage from "@/components/WixImage";
 import { formatCurrency } from "@/lib/utils";
 import styles from "./Product.module.css";
 

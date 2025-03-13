@@ -1,4 +1,4 @@
-import FeaturedProducts from "@/components/FeaturedProducts/FeaturedProducts";
+import FeaturedProducts from "@/components/home-page/FeaturedProducts/FeaturedProducts";
 import { Suspense } from "react";
 
 export default function Home() {
