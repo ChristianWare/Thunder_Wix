@@ -30,8 +30,8 @@ export const getCollections = cache(
     const collections = await wixClient.collections
       .queryCollections()
       .ne("_id", "00000000-000000-000000-000000000001") // exclude all products
-      .ne("_id", "acf5a5ba-05db-d122-5499-3f295f5e8cab") // exclude featured products
-      .ne("_id", "df9eaf0d-85dd-d40c-4153-fab9626b9890") // exclude featured products
+      .ne("_id", "6aab45f0-0c5c-1652-eea3-4e9f0ed352cb") // exclude featured products
+      .ne("_id", "67b5cb52-3c01-f0eb-90dd-bbbc2d9f5e14") // exclude new arrivals
       .find();
 
     // Normalize data by providing default values for potentially undefined or null fields

@@ -1,3 +1,4 @@
+import CategorySection from "@/components/home-page/CategorySection/CategorySection";
 import FeaturedProducts from "@/components/home-page/FeaturedProducts/FeaturedProducts";
 import Hero from "@/components/home-page/hero/Hero";
 // import { Suspense } from "react";
@@ -7,7 +8,8 @@ export default function Home() {
     <main>
       <Hero />
       {/* <Suspense fallback={"Loading..."}> */}
-        <FeaturedProducts />
+      <FeaturedProducts />
+      <CategorySection />
       {/* </Suspense> */}
     </main>
   );

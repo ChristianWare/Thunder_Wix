@@ -20,7 +20,9 @@ export default async function FeaturedProducts() {
       <section className={styles.container}>
         <LayoutWrapper>
           <div className={styles.content}>
-            <h2 className={styles.heading}>New Arrivals</h2>
+            <h2 className={styles.heading}>
+              Featured <br /> Rides
+            </h2>{" "}
             <div className={styles.bottom}>
               {[...Array(6)].map((_, index) => (
                 <Product key={index} isLoading />
@@ -42,7 +44,9 @@ export default async function FeaturedProducts() {
       <section className={styles.container}>
         <LayoutWrapper>
           <div className={styles.content}>
-            <h2 className={styles.heading}>New Arrivals</h2>
+            <h2 className={styles.heading}>
+              Featured <br /> Rides
+            </h2>{" "}
             <div className={styles.bottom}>
               {[...Array(6)].map((_, index) => (
                 <Product key={index} isLoading />
@@ -58,20 +62,22 @@ export default async function FeaturedProducts() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
-          <h2 className={styles.title}>New Arrivals</h2>
+          <h2 className={styles.heading}>
+            Featured <br /> Rides
+          </h2>
         </div>
         <div className={styles.content}>
           {featuredProducts.items.map((product) => (
             <ProductCard key={product._id} product={product} />
           ))}
           <Link href='/shop' className={styles.viewAllParent}>
-              <div className={styles.viewAllTop}>
-                <span className={styles.viewAllTitle}>View All</span>
-                <Arrow className={styles.arrow} />
-              </div>
-              <div className={styles.btnContainer}>
-                <FalseButton btnType='secondaryii' text='View Collection' />
-              </div>
+            <div className={styles.viewAllTop}>
+              <span className={styles.viewAllTitle}>View All</span>
+              <Arrow className={styles.arrow} />
+            </div>
+            <div className={styles.btnContainer}>
+              <FalseButton btnType='secondaryii' text='View Collection' />
+            </div>
           </Link>
         </div>
       </LayoutWrapper>
