@@ -7,12 +7,86 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
+.imgOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1;
+  transition: all 0.2s ease-in;
+}
+
 .imgContainer {
   position: relative;
   width: 100%;
   height: 445px;
+  border: 1px solid var(--white);
 }
 
 .img {
   object-fit: cover;
+}
+
+.imgContainer:hover .imgOverlay {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(232, 37, 37, 0.5);
+}
+
+.collectionNameArrowBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.collectionName {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  display: block;
+}
+
+.arrow {
+  width: 2rem;
+  height: 2rem;
+  color: var(--whiblackte);
+  transform: rotate(90deg);
+  transition: all 0.2s ease-in;
+  position: relative;
+  top: 5px;
+}
+
+.arrowii {
+  width: 7rem;
+  width: 7rem;
+  position: absolute;
+  top: 20;
+  right: 20;
+  transform: rotate(45deg);
+  color: var(--white);
+  z-index: 2;
+  transition: all 0.2s ease-in;
+}
+
+.imgContainer:hover .arrowii {
+  width: 10rem;
+  width: 10rem;
+}
+
+@media screen and (max-width: 1068px) {
+  .bottom {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 6rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

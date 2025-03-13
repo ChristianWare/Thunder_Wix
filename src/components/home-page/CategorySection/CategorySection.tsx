@@ -4,6 +4,7 @@ import { getWixServerClient } from "@/lib/wix-client.server";
 import { getCollections } from "@/wix-api/collections";
 import Link from "next/link";
 import Image from "next/image";
+import Arrow from "../../../../public/icons/arrow.svg";
 
 export default async function CategorySection() {
   const wixClient = await getWixServerClient();
@@ -33,11 +34,17 @@ export default async function CategorySection() {
                         fill
                         className={styles.img}
                       />
+                      <Arrow className={styles.arrowii} />
                     </div>
                   ) : (
                     <div className={styles.noImage}>No Image Available</div>
                   )}
-                  <p className={styles.text}>{collection.name}</p>
+                  <div className={styles.collectionNameArrowBox}>
+                    <span className={styles.collectionName}>
+                      {collection.name}
+                    </span>
+                    <Arrow className={styles.arrow} />
+                  </div>
                 </div>
               </Link>
             ))}
