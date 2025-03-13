@@ -4,17 +4,8 @@ import { getCollectionBySlug } from "@/wix-api/collections";
 import { queryProducts } from "@/wix-api/products";
 import Product from "@/components/shared/Product/Product";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-import Calendar from "../../../../public/icons/calendar.svg";
-import Rotate from "../../../../public/icons/rotate.svg";
-import Mailbox from "../../../../public/icons/mailbox.svg";
-import Globe from "../../../../public/icons/globe.svg";
-import { JSX } from "react";
-
-interface DataItem {
-  id: number;
-  icon: JSX.Element;
-  text: string;
-}
+import ProductCard from "@/components/shared/ProductCard/ProductCard";
+import Link from "next/link";
 
 export default async function FeaturedProducts() {
   const wixClient = await getWixServerClient();
@@ -27,7 +18,7 @@ export default async function FeaturedProducts() {
       <section className={styles.container}>
         <LayoutWrapper>
           <div className={styles.content}>
-            <h2 className={styles.heading}>Popular</h2>
+            <h2 className={styles.heading}>New Arrivals</h2>
             <div className={styles.bottom}>
               {[...Array(6)].map((_, index) => (
                 <Product key={index} isLoading />
@@ -49,7 +40,7 @@ export default async function FeaturedProducts() {
       <section className={styles.container}>
         <LayoutWrapper>
           <div className={styles.content}>
-            <h2 className={styles.heading}>Popular</h2>
+            <h2 className={styles.heading}>New Arrivals</h2>
             <div className={styles.bottom}>
               {[...Array(6)].map((_, index) => (
                 <Product key={index} isLoading />
@@ -61,53 +52,21 @@ export default async function FeaturedProducts() {
     );
   }
 
-  const data = [
-    {
-      id: 1,
-      icon: <Calendar width={50} height={50} className={styles.icon} />,
-      text: "90 Day Guarantee",
-    },
-    {
-      id: 2,
-      icon: <Rotate width={50} height={50} className={styles.icon} />,
-      text: "30 Day Returns",
-    },
-    {
-      id: 3,
-      icon: <Mailbox width={50} height={50} className={styles.icon} />,
-      text: "Ships Next Day",
-    },
-    {
-      id: 4,
-      icon: <Globe width={50} height={50} className={styles.icon} />,
-      text: "Ships Globally",
-    },
-  ];
-
   return (
     <section className={styles.container}>
       <LayoutWrapper>
+        <div className={styles.top}>
+          <h2 className={styles.title}>New Arrivals</h2>
+          <Link href='/shop' className={styles.shopAll}>
+            Shop All
+          </Link>
+        </div>
         <div className={styles.content}>
-          <h2 className={styles.heading}>Popular</h2>
-          <div className={styles.bottom}>
-            {featuredProducts.items.map((product) => (
-              <Product key={product._id} product={product} />
-            ))}
-          </div>
+          {featuredProducts.items.map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
         </div>
       </LayoutWrapper>
-      <div className={styles.parent}>
-        <LayoutWrapper>
-          <div className={styles.bottomii}>
-            {data.map((x: DataItem) => (
-              <div key={x.id} className={styles.box}>
-                {x.icon}
-                <p className={styles.text}>{x.text}</p>
-              </div>
-            ))}
-          </div>
-        </LayoutWrapper>
-      </div>
     </section>
   );
 }

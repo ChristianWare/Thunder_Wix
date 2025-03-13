@@ -31,6 +31,7 @@
 .productName {
   width: 70%;
   transition: all 0.3s ease-in;
+  margin-bottom: 2rem;
 }
 
 .model {
@@ -41,15 +42,16 @@
 .imgContainer {
   position: relative;
   width: 100%;
-  height: 340px;
+  height: 100%;
   flex-grow: 1;
   transition: all 0.3s ease-in;
 }
 
 .img {
   object-fit: contain;
-  padding: 3rem;
   transition: all 0.3s ease-in;
+  width: 100%;
+  height: 100%;
 }
 
 .container:hover {
