@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.input {
+  border: none;
+  height: 50px;
+  background-color: var(--gray);
+  border-radius: 50px;
+  color: var(--black);
+  padding: 1rem;
+  padding-left: 1.7rem;
+  width: 100%;
+  font-weight: 400;
+}
+
+.input::placeholder {
+  color: gray;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}

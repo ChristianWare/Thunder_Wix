@@ -1,0 +1,42 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 100%;
+  background-color: var(--white);
+  padding-top: 5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 3rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 568px) {
+  .header {
+    padding-top: 6rem;
+  }
+
+  .navbar {
+    padding: 4rem 2.5rem;
+    padding-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

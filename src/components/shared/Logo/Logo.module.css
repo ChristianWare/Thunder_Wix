@@ -1,0 +1,46 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.span {
+  font-family: var(--barlowCondensed);
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: var(--red);
+  letter-spacing: 1px;
+  display: block;
+  user-select: none;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--red);
+}
+
+@media screen and (max-width: 568px) {
+  .span {
+    font-size: 2.4rem;
+  }
+
+  .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .span {
+    display: none;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}

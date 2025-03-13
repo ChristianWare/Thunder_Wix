@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.icon {
+  color: gray;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.cartParent {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  background-color: var(--red);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.counter {
+  color: var(--white);
+  font-size: 12px;
+  z-index: 2;
+  font-weight: 600;
+  /* font-family: var(--pretendard); */
+}
+
+@media screen and (max-width: 568px) {
+  .accountContainer {
+    display: none;
+  }
+  
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}

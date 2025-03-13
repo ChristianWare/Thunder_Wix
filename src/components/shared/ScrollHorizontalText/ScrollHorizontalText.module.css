@@ -1,0 +1,59 @@
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  background-color: var(--gray);
+  padding: 1rem 0rem;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scroll 15s linear infinite;
+  gap: 2rem;
+}
+
+.spanContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.text {
+  color: var(--black);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  white-space: nowrap;
+  padding-top: 0.2rem;
+}
+
+.icon2 {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+  position: relative;
+  left: -5px;
+  color: var(--green);
+  transform: rotate(35deg);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slider:hover .track {
+  animation-play-state: paused !important;
+}

@@ -8,6 +8,7 @@ import "./globals.css";
 // import { ModalProvider } from "@/context/ModalContext";
 // import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from "@/lib/constants";
 import localFont from "next/font/local";
+import { Nav } from "@/components/shared/Nav/Nav";
 // import { Toaster } from "react-hot-toast";
 
 const interTight = Inter_Tight({
@@ -66,6 +67,7 @@ export default function RootLayout({
             },
           }}
         /> */}
+        <Nav />
         {children}
         {/* </ModalProvider> */}
       </body>

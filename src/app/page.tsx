@@ -1,10 +1,11 @@
 import FeaturedProducts from "@/components/home-page/FeaturedProducts/FeaturedProducts";
+import Hero from "@/components/home-page/hero/Hero";
 import { Suspense } from "react";
 
 export default function Home() {
   return (
     <main>
-      <h1>Yo</h1>
+      <Hero />
       <Suspense fallback={"Loading..."}>
         <FeaturedProducts />
       </Suspense>

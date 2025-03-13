@@ -4,10 +4,10 @@ import { getCollectionBySlug } from "@/wix-api/collections";
 import { queryProducts } from "@/wix-api/products";
 import Product from "@/components/shared/Product/Product";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-import Calendar from "../../../public/icons/calendar.svg";
-import Rotate from "../../../public/icons/rotate.svg";
-import Mailbox from "../../../public/icons/mailbox.svg";
-import Globe from "../../../public/icons/globe.svg";
+import Calendar from "../../../../public/icons/calendar.svg";
+import Rotate from "../../../../public/icons/rotate.svg";
+import Mailbox from "../../../../public/icons/mailbox.svg";
+import Globe from "../../../../public/icons/globe.svg";
 import { JSX } from "react";
 
 interface DataItem {
