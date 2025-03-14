@@ -31,6 +31,7 @@
 .productName {
   width: 70%;
   transition: all 0.3s ease-in;
+  margin-bottom: 1rem;
 }
 
 .model {
