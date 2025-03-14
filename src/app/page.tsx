@@ -4,6 +4,7 @@ import Hero from "@/components/home-page/hero/Hero";
 import Highlights from "@/components/home-page/Highlights/Highlights";
 import ParallaxArea from "@/components/home-page/ParallaxArea/ParallaxArea";
 import DynamicProductCollection from "@/components/shared/DynamicProductCollection/DynamicProductCollection";
+import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
 // import { Suspense } from "react";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <ParallaxArea />
       <BlogSection />
       <Highlights />
+      <FinalCTA />
     </main>
   );
 }

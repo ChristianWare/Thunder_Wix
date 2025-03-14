@@ -1,0 +1,24 @@
+.top {
+  border-top: 3rem solid var(--black);
+  border-radius: 4px;
+  margin-bottom: 10rem;
+  padding-top: 2rem;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+}
+
+.heading {
+  text-align: justify;
+  line-height: 1.2;
+}
+
+.copy {
+  max-width: 245px;
+}
+
+.btnContainer {
+  margin-top: 3rem;
+}
