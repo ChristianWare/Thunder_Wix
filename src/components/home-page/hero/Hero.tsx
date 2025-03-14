@@ -4,6 +4,8 @@ import LayoutWrapper from "../../shared/LayoutWrapper";
 import ScrollHorizontalText from "../../shared/ScrollHorizontalText/ScrollHorizontalText";
 import Thunder from "../../../../public/icons/lightning.svg";
 import DummyProductCard from "@/components/shared/DummyProductCard/DummyProductCard";
+import Img1 from "../../../../public/images/model2.png";
+
 
 export default function Hero() {
   return (
@@ -25,7 +27,10 @@ export default function Hero() {
               </p>
             </div>
             <div className={styles.right}>
-              <DummyProductCard />
+              <DummyProductCard
+                title='Turbo Vado 4.0 - Cast Black'
+                src={Img1}
+              />
             </div>
           </div>
         </div>

@@ -71,6 +71,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: .5rem 0rem;
 }
 
 .index {
@@ -80,7 +81,6 @@
 @media screen and (max-width: 1268px) {
   .heading {
     font-size: 20vw;
-
     text-align: center;
   }
 }
