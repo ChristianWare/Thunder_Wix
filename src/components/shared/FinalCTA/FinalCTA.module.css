@@ -11,8 +11,9 @@
 }
 
 .heading {
-  text-align: justify;
-  line-height: 1.2;
+  font-size: 16rem;
+  /* text-align: justify; */
+  /* line-height: 1; */
 }
 
 .copy {
