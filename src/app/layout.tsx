@@ -9,6 +9,7 @@ import "./globals.css";
 // import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from "@/lib/constants";
 import localFont from "next/font/local";
 import { Nav } from "@/components/shared/Nav/Nav";
+import SmoothScroll from '../components/shared/SmoothScroll/SmoothScroll'
 // import { Toaster } from "react-hot-toast";
 
 const interTight = Inter_Tight({
@@ -67,8 +68,11 @@ export default function RootLayout({
             },
           }}
         /> */}
-        <Nav />
-        {children}
+        <SmoothScroll>
+          <Nav />
+          {children}
+
+        </SmoothScroll>
         {/* </ModalProvider> */}
       </body>
     </html>
