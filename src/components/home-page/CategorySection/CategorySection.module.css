@@ -39,7 +39,6 @@
 }
 
 .imgContainer:hover .imgOverlay {
-  /* background-color: rgba(0, 0, 0, 0.5); */
   background-color: rgba(232, 37, 37, 0.5);
 }
 
