@@ -16,7 +16,7 @@ export default function Home() {
       <DynamicProductCollection
         title='Best Sellers'
         category='best-sellers'
-        reverse='reverse'
+        // reverse='reverse'
       />
       {/* </Suspense> */}
     </main>
