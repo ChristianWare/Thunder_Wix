@@ -5,6 +5,7 @@ import ParallaxImage from "@/components/shared/ParallaxImage/ParallaxImage";
 import styles from "./ParallaxArea.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Img1 from "../../../../public/images/parallax.jpg";
+
 const data = [
   {
     id: 1,

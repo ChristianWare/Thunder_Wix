@@ -1,7 +1,7 @@
 .top {
   border-top: 3rem solid var(--black);
   border-radius: 4px;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   padding-top: 2rem;
 }
 
@@ -11,9 +11,7 @@
 }
 
 .heading {
-  font-size: 16rem;
-  /* text-align: justify; */
-  /* line-height: 1; */
+  font-size: 10vw;
 }
 
 .copy {
@@ -22,4 +20,67 @@
 
 .btnContainer {
   margin-top: 3rem;
+}
+
+.dataBox {
+  list-style: none;
+}
+
+.title {
+  font-family: var(--barlowCondensed);
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0rem;
+}
+
+.index {
+  display: block;
+}
+
+@media screen and (max-width: 1068px) {
+  .heading,
+  .copy {
+    text-align: center;
+  }
+
+  .copy {
+    max-width: none;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+
+  .btnContainer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    margin-bottom: 3rem;
+  }
+
+  .heading {
+    margin-bottom: 2rem;
+  }
+
+  .btnContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
 }
