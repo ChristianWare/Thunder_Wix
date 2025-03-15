@@ -3,8 +3,9 @@ import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import { getWixServerClient } from "@/lib/wix-client.server";
 import { getCollections } from "@/wix-api/collections";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import Arrow from "../../../../public/icons/arrow.svg";
+import ParallaxImage from "@/components/shared/ParallaxImage/ParallaxImage";
 
 export default async function CategorySection() {
   const wixClient = await getWixServerClient();
@@ -28,12 +29,17 @@ export default async function CategorySection() {
                   <div className={styles.imgOverlay}></div>
                   {collection.bannerImage ? (
                     <div className={styles.imgContainer}>
-                      <Image
+                      {/* <Image
                         src={collection.bannerImage}
                         alt={collection.name || "Collection Banner"}
                         fill
                         className={styles.img}
+                      /> */}
+                      <ParallaxImage
+                        src={collection.bannerImage}
+                        alt='Parallax background'
                       />
+
                       <Arrow className={styles.arrowii} />
                     </div>
                   ) : (

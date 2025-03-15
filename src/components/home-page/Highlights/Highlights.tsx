@@ -20,13 +20,13 @@ export default function Highlights() {
                 src={Img2}
               />
             </div>
-            <div className={styles.bottom2}>
+            {/* <div className={styles.bottom2}>
               <div className={styles.bottom2Blank}></div>
               <DummyProductCard
                 title='Bern Brentwood 2.0 MIPS Helmet'
                 src={Img2}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </LayoutWrapper>
