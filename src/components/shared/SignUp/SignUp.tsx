@@ -1,6 +1,6 @@
 import styles from "./SignUp.module.css";
 import LayoutWrapper from "../LayoutWrapper";
-import Arrow from "../../../../public/icons/arrow.svg";
+import Thunder from "../../../../public/icons/lightning.svg";
 
 export default function SignUp() {
   return (
@@ -16,27 +16,27 @@ export default function SignUp() {
               </p>
             </div>
             <div className={styles.topRight}>
-              <Arrow className={styles.arrow} />
+              <Thunder className={styles.arrow} />
             </div>
           </div>
           <div className={styles.bottom}>
             <form className={styles.form}>
               <div className={styles.labelInputBox}>
-                <label htmlFor='email'>
+                {/* <label htmlFor='email'>
                   Email <span className={styles.required}>*</span>
-                </label>
+                </label> */}
                 <input
                   id='senderEmail'
                   type='email'
-                  //   placeholder='Email'
+                  placeholder='Email'
                   maxLength={500}
                 />
               </div>
-              <div className={styles.btnContainer}>
-                <button className={styles.btn}>Sign Up</button>
-              </div>
+              {/* <div className={styles.btnContainer}> */}
+              <button className={styles.btn}>Sign Up</button>
+              {/* </div> */}
             </form>
-              <div className={styles.borderBottom} />
+            <div className={styles.borderBottom} />
           </div>
         </div>
       </LayoutWrapper>
