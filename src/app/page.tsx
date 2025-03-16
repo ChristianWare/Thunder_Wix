@@ -6,6 +6,7 @@ import Highlights from "@/components/home-page/Highlights/Highlights";
 import ParallaxArea from "@/components/home-page/ParallaxArea/ParallaxArea";
 import DynamicProductCollection from "@/components/shared/DynamicProductCollection/DynamicProductCollection";
 import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
+import Footer from "@/components/shared/Footer/Footer";
 import SignUp from "@/components/shared/SignUp/SignUp";
 // import { Suspense } from "react";
 
@@ -31,6 +32,7 @@ export default function Home() {
       <Highlights />
       <FinalCTA />
       <SignUp />
+      <Footer />
     </main>
   );
 }
