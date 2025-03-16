@@ -25,10 +25,10 @@ export default function Home() {
         // reverse='reverse'
       />
       <ParallaxArea />
+      <Advantages />
       <BlogSection />
       <Highlights />
       <FinalCTA />
-      <Advantages />
     </main>
   );
 }
