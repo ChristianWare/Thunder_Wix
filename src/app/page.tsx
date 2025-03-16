@@ -1,3 +1,4 @@
+import Advantages from "@/components/home-page/Advantages/Advantages";
 import BlogSection from "@/components/home-page/BlogSection/BlogSection";
 import CategorySection from "@/components/home-page/CategorySection/CategorySection";
 import Hero from "@/components/home-page/hero/Hero";
@@ -27,6 +28,7 @@ export default function Home() {
       <BlogSection />
       <Highlights />
       <FinalCTA />
+      <Advantages />
     </main>
   );
 }

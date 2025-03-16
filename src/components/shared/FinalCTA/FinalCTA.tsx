@@ -1,6 +1,6 @@
+import styles from "./FinalCTA.module.css";
 import Button from "../Button/Button";
 import LayoutWrapper from "../LayoutWrapper";
-import styles from "./FinalCTA.module.css";
 
 const data = [
   {
