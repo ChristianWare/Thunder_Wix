@@ -16,6 +16,10 @@
   height: 100%;
 }
 
+.heading {
+  letter-spacing: -1px;
+}
+
 .revealText {
   color: var(--black);
   filter: drop-shadow(0 0 0.08rem var(--white));
