@@ -1,3 +1,147 @@
 .container {
   background-color: var(--black);
 }
+
+.top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--border2);
+}
+
+.section1,
+.section2,
+.section3 {
+  border-right: 1px solid var(--border2);
+  padding-left: 2rem;
+}
+
+.section3 {
+  border-right: none;
+}
+
+.titleBox {
+  list-style: none;
+}
+
+.title {
+  color: var(--white);
+  opacity: 0.7;
+  font-weight: 700;
+  font-size: 3.2rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  font-family: var(--barlowCondensed);
+}
+
+.h3Heading {
+  color: var(--white);
+  font-weight: 700;
+  line-height: 105%;
+  margin-bottom: 3rem;
+}
+
+.optionBox {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.option {
+  font-size: 1.6rem;
+  color: var(--white);
+  opacity: 0.7;
+}
+
+.iconMap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.iconBox {
+  padding: 4rem;
+  border: 1px solid var(--border2);
+  border-top: none;
+  border-left: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBox:nth-child(2),
+.iconBox:nth-child(4) {
+  border-right: none;
+}
+
+.iconBox:nth-child(1),
+.iconBox:nth-child(3) {
+  border-left: 1px solid var(--border2);
+}
+
+.iconBox:nth-child(3),
+.iconBox:nth-child(4) {
+  border-bottom: none;
+}
+
+.iconContainer {
+  background-color: #1c1c1c;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: var(--white);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1068px) {
+  .top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section1,
+  .section2 {
+    border-bottom: 1px solid var(--border2);
+    padding-bottom: 2rem;
+  }
+
+  .section3 {
+    padding-top: 3rem;
+  }
+
+  .iconBox:nth-child(2),
+  .iconBox:nth-child(4) {
+    border-right: 1px solid var(--border2);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .top {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section1 {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border2);
+    border-left: 1px solid var(--border2);
+  }
+  .section2 {
+    padding-top: 3rem;
+    border-left: 1px solid var(--border2);
+  }
+
+  .section3 {
+    border-left: 1px solid var(--border2);
+    border-right: 1px solid var(--border2);
+    border-bottom: 1px solid var(--border2);
+    padding-bottom: 3rem;
+  }
+}

@@ -1,5 +1,11 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Footer.module.css";
+import Facebook from "../../../../public/icons/facebook.svg";
+import Instagram from "../../../../public/icons/instagram.svg";
+import Youtube from "../../../../public/icons/youtube.svg";
+import LinkedIn from "../../../../public/icons/linkedin.svg";
+import Email from "../../../../public/icons/mailbox.svg";
+import Phone from "../../../../public/icons/phone.svg";
 
 const data = [
   {
@@ -8,15 +14,15 @@ const data = [
   },
   {
     id: 2,
-    title: "Bikes",
+    title: "Gear",
   },
   {
     id: 3,
-    title: "Bikes",
+    title: "Parts",
   },
   {
     id: 4,
-    title: "Bikes",
+    title: "Brands",
   },
   {
     id: 5,
@@ -47,6 +53,9 @@ const dataii = [
       },
     ],
   },
+];
+
+const dataiii = [
   {
     id: 2.1,
     title: "Support",
@@ -75,11 +84,77 @@ const dataii = [
   },
 ];
 
+const dataiv = [
+  {
+    id: 3,
+    icon: <Facebook className={styles.icon} />,
+  },
+  {
+    id: 3,
+    icon: <Instagram className={styles.icon} />,
+  },
+  {
+    id: 3,
+    icon: <Youtube className={styles.icon} />,
+  },
+  {
+    id: 3,
+    icon: <LinkedIn className={styles.icon} />,
+  },
+];
+
 export default function Footer() {
   return (
     <footer className={styles.container}>
       <LayoutWrapper>
-        <div className={styles.content}>footer here</div>
+        <div className={styles.top}>
+          <div className={styles.section1}>
+            {data.map((x) => (
+              <ul key={x.id} className={styles.titleBox}>
+                <li className={styles.title}>{x.title}</li>
+              </ul>
+            ))}
+          </div>
+          <div className={styles.section2}>
+            {dataii.map((x) => (
+              <div className={styles.topSection} key={x.id}>
+                <h3 className={styles.h3Heading}>{x.title}</h3>
+                <ul className={styles.optionBox}>
+                  {x.options.map((y) => (
+                    <li key={y.id} className={styles.option}>
+                      {y.option}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className={styles.section3}>
+            {dataiii.map((x) => (
+              <div className={styles.topSection} key={x.id}>
+                <h3 className={styles.h3Heading}>{x.title}</h3>
+                <ul className={styles.optionBox}>
+                  {x.options.map((y) => (
+                    <li key={y.id} className={styles.option}>
+                      {y.option}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className={styles.section4}>
+            <div className={styles.iconMap}>
+              {dataiv.map((x) => (
+                <div key={x.id} className={styles.iconBox}>
+                  <div className={styles.iconContainer}>{x.icon}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className={styles.middle}></div>
+        <div className={styles.bottom}></div>
       </LayoutWrapper>
     </footer>
   );

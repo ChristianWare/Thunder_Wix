@@ -13,24 +13,22 @@ import SignUp from "@/components/shared/SignUp/SignUp";
 export default function Home() {
   return (
     <main>
-      <Hero />
-      {/* <Suspense fallback={"Loading..."}> */}
+      {/* <Hero />
       <DynamicProductCollection
         title='Featured Rides'
         category='featured-products'
       />
-      {/* </Suspense> */}
       <CategorySection />
       <DynamicProductCollection
         title='Best Sellers'
         category='best-sellers'
-        // reverse='reverse'
-      />
-      <ParallaxArea />
+      /> */}
+      {/* <ParallaxArea />
       <Advantages />
       <BlogSection />
       <Highlights />
       <FinalCTA />
+      */}
       <SignUp />
       <Footer />
     </main>
