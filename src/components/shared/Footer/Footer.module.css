@@ -25,7 +25,7 @@
 
 .title {
   color: var(--white);
-  opacity: 0.7;
+  opacity: 0.5;
   font-weight: 700;
   font-size: 3.2rem;
   letter-spacing: -1px;
@@ -52,7 +52,7 @@
 .option {
   font-size: 1.6rem;
   color: var(--white);
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .iconMap {
@@ -102,6 +102,64 @@
   border-radius: 50%;
 }
 
+.middle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.middleLeft,
+.middleMiddle,
+.middleRight {
+  padding: 2rem;
+  padding-bottom: 3rem;
+}
+
+.middleLeft,
+.middleMiddle {
+  border: 1px solid var(--border2);
+  border-top: none;
+}
+
+.middleRight {
+  border-bottom: 1px solid var(--border2);
+}
+
+.middleLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.directions {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.hoursBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.openingHours {
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+}
+
+.date {
+  color: var(--white);
+}
+
+.date span {
+  display: block;
+  opacity: 0.5;
+}
+
 @media screen and (max-width: 1068px) {
   .top {
     grid-template-columns: repeat(2, 1fr);
@@ -120,6 +178,14 @@
   .iconBox:nth-child(2),
   .iconBox:nth-child(4) {
     border-right: 1px solid var(--border2);
+  }
+
+  .hoursBox {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: 3rem;
   }
 }
 

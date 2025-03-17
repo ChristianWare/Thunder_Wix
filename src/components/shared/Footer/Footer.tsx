@@ -77,7 +77,7 @@ const dataiii = [
         option: "Warrenty & Repair",
       },
       {
-        id: 2.5,
+        id: 2.6,
         option: "Payments",
       },
     ],
@@ -86,19 +86,19 @@ const dataiii = [
 
 const dataiv = [
   {
-    id: 3,
+    id: 3.1,
     icon: <Facebook className={styles.icon} />,
   },
   {
-    id: 3,
+    id: 3.2,
     icon: <Instagram className={styles.icon} />,
   },
   {
-    id: 3,
+    id: 3.3,
     icon: <Youtube className={styles.icon} />,
   },
   {
-    id: 3,
+    id: 3.4,
     icon: <LinkedIn className={styles.icon} />,
   },
 ];
@@ -153,7 +153,30 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className={styles.middle}></div>
+        <div className={styles.middle}>
+          <div className={styles.middleLeft}>
+            <h3 className={styles.h3Heading}>Visit Us</h3>
+            <p className={styles.option}>
+              123 Main St
+              <br />
+              Rockaway Beach, Ny 11693
+            </p>
+            <p className={styles.directions}>Get Directions →</p>
+            <div className={styles.hoursBox}>
+              <div className={styles.openingHours}>Opening Hours</div>
+              <p className={styles.date}>
+                Mon-Fri
+                <span>10am - 7pm</span>
+              </p>
+              <p className={styles.date}>
+                Saturday
+                <span>10am - 2pm</span>
+              </p>
+            </div>
+          </div>
+          <div className={styles.middleMiddle}>Middle</div>
+          <div className={styles.middleRight}>Right</div>
+        </div>
         <div className={styles.bottom}></div>
       </LayoutWrapper>
     </footer>
