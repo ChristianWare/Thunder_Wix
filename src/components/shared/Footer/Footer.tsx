@@ -197,7 +197,15 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className={styles.bottom}></div>
+        <div className={styles.bottom}>
+          <div className={styles.bottomLeft}>
+            <small>© Thundertrails 2025. All rights reserved.</small>
+          </div>
+          <div className={styles.bottomRight}>
+            <small>Privacy Policy</small>
+            <small>Terms of Services</small>
+          </div>
+        </div>
       </LayoutWrapper>
     </footer>
   );
