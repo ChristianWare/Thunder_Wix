@@ -1,0 +1,59 @@
+.content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.heading,
+.headingii {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 8vw;
+  /* width: 90%; */
+}
+
+.headingii {
+  display: none;
+  color: var(--purple);
+  letter-spacing: -0.5px;
+}
+
+.revealText {
+  color: var(--white);
+  filter: drop-shadow(0 0 0.08rem var(--red));
+  line-height: 1;
+  /* font-family: var(--BoogyBrutPoster); */
+  /* text-transform: none; */
+}
+
+.bottom {
+  margin-top: 5rem;
+}
+
+.lottieBox {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+.lottie {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1068px) {
+  .heading,
+  .headingii {
+    font-size: 9vw;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading,
+  .headingii {
+    font-size: 12vw;
+  }
+}

@@ -1,0 +1,118 @@
+.container {
+  margin-top: 1rem;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  /* background-image: url("/images/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.img {
+  object-fit: cover;
+  overflow-clip-margin: content-box;
+  vertical-align: middle;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.imgOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+.contentChildren {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+  z-index: 3;
+  height: 100%;
+  margin-top: -3rem;
+}
+
+.left,
+.right {
+  z-index: 3;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.heading {
+  color: var(--white);
+}
+
+.thunder {
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.icon {
+  width: 8.5rem;
+  height: 8.5rem;
+  color: var(--white);
+}
+
+.right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.copy {
+  color: var(--white);
+  font-family: var(--barlowSemiCondensed);
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: -0.5px;
+  line-height: 105%;
+  text-align: right;
+}
+
+@media screen and (max-width: 1068px) {
+  .contentChildren {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .left {
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .heading,
+  .copy {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    height: 90vh;
+  }
+}
