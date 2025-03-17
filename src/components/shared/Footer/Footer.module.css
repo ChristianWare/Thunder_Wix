@@ -158,11 +158,36 @@
 .date span {
   display: block;
   opacity: 0.5;
+  margin-top: 0.5rem;
+}
+
+.middleMiddle,
+.middleContent,
+.middleRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .hoursBox {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
 }
 
 @media screen and (max-width: 1068px) {
-  .top {
+  .top,
+  .middle {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .middleRight {
+    grid-column: span 2;
+    padding: 5rem;
   }
 
   .section1,
@@ -190,8 +215,21 @@
 }
 
 @media screen and (max-width: 568px) {
-  .top {
+  .top,
+  .middle {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .middleRight {
+    grid-column: span 1;
+    border-left: 1px solid var(--border2);
+    border-right: 1px solid var(--border2);
+  }
+
+  .middleMiddle, .middleRight {
+    padding: 5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .section1 {

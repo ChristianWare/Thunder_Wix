@@ -5,7 +5,7 @@ import Instagram from "../../../../public/icons/instagram.svg";
 import Youtube from "../../../../public/icons/youtube.svg";
 import LinkedIn from "../../../../public/icons/linkedin.svg";
 import Email from "../../../../public/icons/mailbox.svg";
-import Phone from "../../../../public/icons/phone.svg";
+import Phone from "../../../../public/icons/headphones.svg";
 
 const data = [
   {
@@ -174,8 +174,28 @@ export default function Footer() {
               </p>
             </div>
           </div>
-          <div className={styles.middleMiddle}>Middle</div>
-          <div className={styles.middleRight}>Right</div>
+          <div className={styles.middleMiddle}>
+            <div className={styles.middleContent}>
+              <div className={styles.iconContainer}>
+                <Phone className={styles.icon} />
+              </div>
+              <p className={styles.date}>
+                Call Us
+                <span>Mon-Fri: 10am - 7pm EST</span>
+              </p>
+            </div>
+          </div>
+          <div className={styles.middleRight}>
+            <div className={styles.middleContent}>
+              <div className={styles.iconContainer}>
+                <Email className={styles.icon} />
+              </div>
+              <p className={styles.date}>
+                Email
+                <span>We usually reply within 48 hours</span>
+              </p>
+            </div>
+          </div>
         </div>
         <div className={styles.bottom}></div>
       </LayoutWrapper>
