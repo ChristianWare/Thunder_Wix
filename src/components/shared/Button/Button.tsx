@@ -1,15 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import styles from "./Button.module.css";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import Link from "next/link";
 
 interface Props {
   href: string;
-  text: string;
+  text?: string;
   btnType: string;
   target?: string;
   onClick?: () => void;
   disabled?: any;
+  children?: ReactNode;
 }
 
 const Button: FC<Props> = ({
@@ -19,6 +20,7 @@ const Button: FC<Props> = ({
   target = "",
   onClick,
   disabled,
+  children,
 }) => {
   return (
     <button className={styles.container} onClick={onClick} disabled={disabled}>
@@ -27,7 +29,7 @@ const Button: FC<Props> = ({
         className={`${styles.btn} ${styles[btnType]}`}
         target={target}
       >
-        {text}
+        {text || children}
       </Link>
     </button>
   );

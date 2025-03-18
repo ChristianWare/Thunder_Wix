@@ -31,6 +31,31 @@
   border: 1px solid var(--red);
 }
 
+.primaryii {
+  color: var(--white);
+  background-color: var(--black);
+  border: 1px solid var(--black);
+  padding: 1rem 3rem;
+}
+
+.primaryii:hover {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.primaryiii {
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  padding: 1rem 3rem;
+}
+
+.primaryiii:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
 .secondary {
   color: var(--white);
   border: 1px solid var(--gold);
