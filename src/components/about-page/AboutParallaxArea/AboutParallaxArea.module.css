@@ -1,0 +1,135 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  padding: 4rem 0;
+  z-index: 10;
+}
+
+.imgOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: 5;
+}
+
+.contentChildren {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5rem;
+  padding: 2rem;
+  height: 100%;
+}
+
+.heading {
+  color: white;
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-size: 10vw;
+}
+
+.span {
+  display: inline-block;
+  line-height: inherit;
+  -webkit-text-stroke: 2px var(--white);
+  -webkit-text-fill-color: transparent;
+  margin-right: 1rem;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  grid-gap: 3rem;
+}
+
+.copy {
+  color: var(--white);
+  max-width: 245px;
+}
+
+.copy2 {
+  color: var(--white);
+}
+
+.dataBox {
+  list-style: none;
+}
+
+.title {
+  color: var(--white);
+  font-family: var(--barlowCondensed);
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.index {
+  display: block;
+}
+
+@media screen and (max-width: 1268px) {
+  .heading {
+    text-align: center;
+    font-size: 12rem;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .contentChildren {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: fit-content;
+  }
+
+  .contentChildren,
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .copy {
+    text-align: center;
+    max-width: none;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .span {
+    -webkit-text-stroke: 2px var(--white);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    text-align: center;
+    font-size: 20vw;
+  }
+}

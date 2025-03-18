@@ -31,7 +31,6 @@ const data = [
 
 export default function ParallaxArea() {
   return (
-    // <ReactLenis root={false}>
     <section className={styles.container}>
       <ParallaxImage src={Img1} alt='Parallax background' />
       <div className={styles.imgOverlay} />
@@ -63,6 +62,5 @@ export default function ParallaxArea() {
         </div>
       </LayoutWrapper>
     </section>
-    // </ReactLenis>
   );
 }
