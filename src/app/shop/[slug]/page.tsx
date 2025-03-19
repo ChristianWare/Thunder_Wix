@@ -1,11 +1,16 @@
+import Footer from "@/components/shared/Footer/Footer";
+import styles from "./CategoryProductsPage.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import ProductCard from "@/components/shared/ProductCard/ProductCard";
+import SignUp from "@/components/shared/SignUp/SignUp";
+import CollectionGroup from "@/components/shop-page/CollectionGroup/CollectionGroup";
 import { getWixServerClient } from "@/lib/wix-client.server";
 import { getCollectionBySlug } from "@/wix-api/collections";
 import { queryProducts } from "@/wix-api/products";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import LoadingPage from "@/app/loading";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -44,21 +49,21 @@ export default async function CategoryProductsPage({ params }: PageProps) {
   if (!collection?._id) notFound();
 
   // const banner = collection.media?.mainMedia?.image?.url || "";
-  // const categoryName = collection.name || "Category";
+  const categoryName = collection.name || "Category";
 
   return (
     <main>
-      <h1>Individual Category Products Page</h1>
-      <h1>Individual Category Products Page</h1>
-      <h1>Individual Category Products Page</h1>
       <LayoutWrapper>
-        <Suspense fallback={"Loading..."}>
-          <Products collectionId={collection._id} />
-        </Suspense>
-        <br />
-        <br />
-        <br />
+        <div className={styles.container}>
+          <h2 className={styles.heading}>{categoryName}</h2>
+          <CollectionGroup currentSlug={slug} />
+          <Suspense fallback={<LoadingPage />}>
+            <Products collectionId={collection._id} />
+          </Suspense>
+        </div>
       </LayoutWrapper>
+      <SignUp />
+      <Footer />
     </main>
   );
 }
@@ -76,11 +81,18 @@ async function Products({ collectionId }: ProductProps) {
   if (!collectionProducts.length) notFound();
 
   return (
-    // <div className={styles.container}>
-    <div>
-      {collectionProducts.items.map((product) => (
-        <ProductCard key={product._id} product={product} />
-      ))}
-    </div>
+    <>
+      <div className={styles.products}>
+        {collectionProducts.items.map((product) => (
+          <ProductCard key={product._id} product={product} />
+        ))}
+      </div>
+      <h2 className={styles.headingii}>
+        You have viewed{" "}
+        <span className={styles.count}>{collectionProducts.length}</span>
+        of <span className={styles.count}>{collectionProducts.length}</span>
+        products{" "}
+      </h2>
+    </>
   );
 }

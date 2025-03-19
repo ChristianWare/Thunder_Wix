@@ -21,8 +21,8 @@ export default async function CategorySection() {
           <div className={styles.bottom}>
             {collections.map((collection) => (
               <Link
-                // href={`/collections/${collection.slug}`}
-                href='/'
+                href={`/shop/${collection.slug}`}
+                // href='/'
                 key={collection._id}
               >
                 <div className={styles.imgContainer}>
