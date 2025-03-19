@@ -7,6 +7,7 @@ import { checkInStock, findVariant } from "@/lib/utils";
 import ProductMedia from "../ProductMedia/ProductMedia";
 import ProductPrice from "../ProductPrice/ProductPrice";
 import ProductOptions from "../ProductOptions/ProductOptions";
+import Link from "next/link";
 // import AddToCartButton from "@/components/AddToCartButton/AddToCartButton";
 
 interface ProductDetailsProps {
@@ -64,14 +65,21 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
     }
   };
 
+  console.log(product);
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
         <ProductMedia media={selectedMedia} />
       </div>
       <div className={styles.right}>
-        <span className={styles.breadcrumbs}>Shop • {product.ribbon}</span>
-        <h1 className={styles.heading}>{product.name}</h1>
+        <h1 className={styles.productName}>{product.name}</h1>
+        <Link
+          href={`/shop/${product.ribbon?.toLowerCase()}`}
+          className={styles.productRibbon}
+        >
+          {product.ribbon}
+        </Link>
         <ProductPrice product={product} selectedVariant={selectedVariant} />
 
         {product.description && (
@@ -158,8 +166,6 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         ) : (
           <button className={styles.outOfStockButton}>Out of stock</button>
         )}
-
-        
       </div>
     </div>
   );
