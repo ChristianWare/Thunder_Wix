@@ -176,6 +176,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: -10rem;
 }
 
 .bottomLeft small,
@@ -235,6 +236,13 @@
     margin-top: 3rem;
   }
 }
+
+@media screen and (max-width: 870px) {
+  .bottom {
+    margin-bottom: -5rem;
+  }
+}
+
 
 @media screen and (max-width: 568px) {
   .top,
