@@ -53,6 +53,12 @@ export default async function ProductResults({
           ))}
         </div>
       </div>
+      <h2 className={styles.headingii}>
+        You have viewed{" "}
+        <span className={styles.count}>{products.totalCount} </span>
+        of <span className={styles.count}>{products.totalCount} </span>
+        {products.totalCount === 1 ? "product" : "products"}
+      </h2>
     </section>
   );
 }

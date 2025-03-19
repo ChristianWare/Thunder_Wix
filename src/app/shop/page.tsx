@@ -5,8 +5,10 @@ import ProductResults from "@/components/shop-page/ProductResults/ProductResults
 // import { getWixServerClient } from "@/lib/wix-client.server";
 // import { getCollections } from "@/wix-api/collections";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-import CollectionGroup from "@/components/shop-page/CollectionGroup/CollectionGroup";
+// import CollectionGroup from "@/components/shop-page/CollectionGroup/CollectionGroup";
 import LoadingPage from "../loading";
+import Footer from "@/components/shared/Footer/Footer";
+import SignUp from "@/components/shared/SignUp/SignUp";
 
 interface PageProps {
   searchParams: Promise<{
@@ -59,6 +61,8 @@ export default async function ShopPage({ searchParams }: PageProps) {
         </Suspense>
         {/* </SearchFilterLayout> */}
       </LayoutWrapper>{" "}
+      <SignUp />
+      <Footer />
     </main>
   );
 }
