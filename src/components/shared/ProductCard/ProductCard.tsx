@@ -15,7 +15,7 @@ export default function ProductCard({ product }: Props) {
 
   return (
     <article className={styles.container}>
-      <Link href={`/shop/${product?.slug}`} className={styles.link}>
+      <Link href={`/products/${product?.slug}`} className={styles.link}>
         <div className={styles.top}>
           <h3 className={styles.productName}>{product.name}</h3>
           <span className={styles.model}>{product.category}</span>

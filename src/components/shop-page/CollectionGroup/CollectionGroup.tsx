@@ -14,7 +14,7 @@ export default async function CollectionGroup() {
         <Button btnType='primaryii' text='All Products' href='/shop' />
         {collections.map((collection) => (
           <Button
-            href={`/collections/${collection.slug}`}
+            href={`/shop/${collection.slug}`}
             key={collection._id}
             btnType='primaryiii'
           >
