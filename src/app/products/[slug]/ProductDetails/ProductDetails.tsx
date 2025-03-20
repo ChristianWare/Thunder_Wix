@@ -72,7 +72,9 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <ProductMedia media={selectedMedia} />
+        <div className={styles.productMediaContainer}>
+          <ProductMedia media={selectedMedia} />
+        </div>
       </div>
       <div className={styles.right}>
         <h1 className={styles.productName}>{product.name}</h1>

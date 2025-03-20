@@ -7,13 +7,13 @@
 
 .imgContainer {
   width: 100%;
-  height: 550px;
+  height: 100%;
   position: relative;
 }
 
 .img {
   object-fit: contain;
-  
+
   width: 100%;
   height: 100%;
 }
@@ -32,33 +32,44 @@
   gap: 1rem;
 }
 
+.arrowsContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
 .arrowButton {
-  /* background: none; */
-  /* border: none; */
   cursor: pointer;
   padding: 0.5rem;
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  /* border: 1px solid var(--burgundy); */
-  background-color: lightgray;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  border: 1px solid var(--black);
+  background-color: var(--white);
+  border-radius: 4px;
+  width: 5rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--black);
+  transition: all 0.2s ease-in;
 }
 
-.leftArrow {
+.arrowButton:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* .leftArrow {
   left: 20px;
 }
 
 .rightArrow {
   right: 20px;
-}
+} */
 
 .arrow {
   width: 24px;

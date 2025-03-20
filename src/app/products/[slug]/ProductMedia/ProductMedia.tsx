@@ -11,14 +11,16 @@ interface ProductMediaProps {
 }
 
 export default function ProductMedia({ media }: ProductMediaProps) {
+  const initialIndex = 1;
+
   const [selectedMedia, setSelectedMedia] = useState<
     products.MediaItem | undefined
-  >(media?.[0]);
+  >(media && media.length > initialIndex ? media[initialIndex] : media?.[0]);
 
-  // Reset selected media when the `media` prop changes
   useEffect(() => {
     if (media?.length) {
-      setSelectedMedia(media[0]);
+      const indexToShow = media.length > initialIndex ? initialIndex : 0;
+      setSelectedMedia(media[indexToShow]);
     }
   }, [media]);
 
@@ -72,7 +74,6 @@ export default function ProductMedia({ media }: ProductMediaProps) {
           </video>
         ) : null}
 
-        {/* Overlay circles representing remaining images */}
         <div className={styles.circleContainer}>
           {media.map((_, index) => (
             <span
@@ -85,20 +86,20 @@ export default function ProductMedia({ media }: ProductMediaProps) {
             />
           ))}
         </div>
-
-        {/* Left and Right Navigation Arrows */}
-        <button
-          className={`${styles.arrowButton} ${styles.leftArrow}`}
-          onClick={handlePrevious}
-        >
-          <Arrow className={styles.arrow} />
-        </button>
-        <button
-          className={`${styles.arrowButton} ${styles.rightArrow}`}
-          onClick={handleNext}
-        >
-          <Arrow className={`${styles.arrow} ${styles.arrowReverse}`} />
-        </button>
+        <div className={styles.arrowsContainer}>
+          <button
+            className={`${styles.arrowButton} ${styles.leftArrow}`}
+            onClick={handlePrevious}
+          >
+            <Arrow className={styles.arrow} />
+          </button>
+          <button
+            className={`${styles.arrowButton} ${styles.rightArrow}`}
+            onClick={handleNext}
+          >
+            <Arrow className={`${styles.arrow} ${styles.arrowReverse}`} />
+          </button>
+        </div>
       </div>
     </div>
   );
