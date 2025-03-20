@@ -62,7 +62,9 @@ export default function ProductMedia({ media }: ProductMediaProps) {
           <WixImage
             mediaIdentifier={selectedImage.url}
             alt={selectedImage.altText || "Product Image"}
-            scaletofill={false}
+            // scaletofill={false}
+            width={1000}
+            height={1000}
             className={styles.img}
           />
         ) : selectedVideo?.url ? (

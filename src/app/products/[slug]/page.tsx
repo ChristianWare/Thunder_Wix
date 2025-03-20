@@ -4,7 +4,10 @@ import ProductDetails from "./ProductDetails/ProductDetails";
 import { Metadata } from "next";
 import { getWixServerClient } from "@/lib/wix-client.server";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-import Witb from "@/components/shared/Witb/Witb";
+import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
+import SignUp from "@/components/shared/SignUp/SignUp";
+import Footer from "@/components/shared/Footer/Footer";
+import ParallaxArea from "@/components/home-page/ParallaxArea/ParallaxArea";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -48,15 +51,15 @@ export default async function ProductPage({ params }: PageProps) {
 
   if (!product?._id) notFound();
 
-  const media = product.media?.items;
   return (
     <main>
       <LayoutWrapper>
-        <div>
-          <ProductDetails product={product} />
-        </div>
+        <ProductDetails product={product} />
       </LayoutWrapper>
-      <Witb media={media} itemName={product.name || undefined} />
+      <ParallaxArea />
+      <FinalCTA />
+      <SignUp />
+      <Footer />
     </main>
   );
 }

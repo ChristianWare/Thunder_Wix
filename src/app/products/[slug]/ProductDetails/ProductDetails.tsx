@@ -155,12 +155,12 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                     +
                   </button>
                 </div> */}
-                {!!availableQuantity &&
+                {/* {!!availableQuantity &&
                   (availableQuantityExceeded || availableQuantity < 10) && (
                     <span className={styles.stockWarning}>
                       Only {availableQuantity} left in stock
                     </span>
-                  )}
+                  )} */}
               </div>
               <div className={styles.btnContainer}>
                 <AddToCartButton
