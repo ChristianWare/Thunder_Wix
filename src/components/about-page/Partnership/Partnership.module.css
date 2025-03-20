@@ -21,9 +21,11 @@
 }
 
 .revealText {
-  color: var(--black);
+  /* color: var(--white); */
+  color: transparent;
   filter: drop-shadow(0 0 0.08rem var(--white));
   line-height: 1;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1068px) {

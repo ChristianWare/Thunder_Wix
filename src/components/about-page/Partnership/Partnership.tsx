@@ -42,6 +42,7 @@ export default function Partnership() {
         letter,
         {
           color: "#ffffff",
+          backgroundColor: "var(--red)", 
           duration: 0.2,
         },
         index * 0.015
