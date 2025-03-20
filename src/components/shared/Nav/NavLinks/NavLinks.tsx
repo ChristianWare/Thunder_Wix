@@ -3,7 +3,7 @@
 import styles from './NavLinks.module.css'
 import Logo from '../../Logo/Logo';
 import Link from "next/link";
-import SearchBar from '../../SearchBar/SearchBar';
+// import SearchBar from '../../SearchBar/SearchBar';
 import { useEffect, useState } from "react";
 import Plus from "../../../../../public/icons/plus.svg";
 
@@ -102,9 +102,9 @@ export default function NavLinks() {
                 : `${styles.navMenu} ${styles.active}`
             }
           >
-            <div className={styles.searchContainer}>
+            {/* <div className={styles.searchContainer}>
               <SearchBar closeMenu={() => setIsOpen(false)} />
-            </div>
+            </div> */}
             {navItems.map((navItem, index) => (
               <li
                 key={index}
