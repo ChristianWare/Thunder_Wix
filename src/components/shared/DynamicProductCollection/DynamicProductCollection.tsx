@@ -81,7 +81,7 @@ export default async function DynamicProductCollection({
               <Arrow className={styles.arrow} />
             </div>
             <div className={styles.btnContainer}>
-              <FalseButton btnType='secondaryii' text='View Collection' />
+              <FalseButton btnType='secondary' text='View Collection' />
             </div>
           </Link>
         </div>

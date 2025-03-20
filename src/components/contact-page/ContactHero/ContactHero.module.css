@@ -1,0 +1,100 @@
+.container {
+  margin-top: 5rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10rem;
+}
+
+.listBox {
+  background-color: var(--blue);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+  border-radius: 5px;
+}
+
+.needHelp {
+  color: var(--white);
+  font-size: 2.1rem;
+}
+
+.list {
+  list-style: none;
+  width: 100%;
+}
+
+.listItem {
+  color: var(--white);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0rem;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.listItem:nth-child(1) {
+  border-top: 1px solid var(--border);
+}
+
+.rightBottom {
+  width: 100%;
+}
+
+.list2 {
+  margin-top: 10rem;
+}
+
+.data2Card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid var(--black);
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.title {
+  font-size: 3.7rem;
+}
+
+@media screen and (max-width: 1268px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .list2 {
+    margin-top: 5rem;
+  }
+
+  .data2Card {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .btnContainer {
+    display: grid;
+    width: 100%;
+  }
+}
