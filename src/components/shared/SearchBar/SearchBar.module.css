@@ -3,16 +3,18 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .input {
+  position: relative;
   border: none;
-  height: 50px;
+  height: 40px;
   background-color: var(--gray);
   border-radius: 50px;
   color: var(--black);
   padding: 1rem;
-  padding-left: 1.7rem;
+  padding-left: 3.5rem;
   width: 100%;
   font-weight: 400;
 }
@@ -22,6 +24,10 @@
 }
 
 .icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 25%;
+  left: 10px;
+  z-index: 2;
 }

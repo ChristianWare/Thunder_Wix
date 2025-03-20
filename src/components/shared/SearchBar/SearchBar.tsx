@@ -29,13 +29,13 @@ export default function SearchBar({ closeMenu }: SearchBarProps) {
 
   return (
     <form className={styles.container} onSubmit={handleSearch}>
+      <SearchIcon className={styles.icon} />
       <input
         type='text'
         name='name'
-        placeholder='search'
+        placeholder='What are you searching for?'
         className={styles.input}
       />
-      <SearchIcon className={styles.icon} />
     </form>
   );
 }

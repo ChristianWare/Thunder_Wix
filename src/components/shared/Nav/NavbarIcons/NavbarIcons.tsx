@@ -1,5 +1,6 @@
 import styles from "./NavbarIcons.module.css";
 import Cart from "../../../../../public/icons/cart.svg";
+import FalseButton from "../../FalseButton/FalseButton";
 // import Link from "next/link";
 // import Button from "../Button/Button";
 
@@ -12,7 +13,8 @@ export default async function NavbarIcons() {
         ) : (
           <Link href='sign-in'>Sign In</Link>
         )} */}
-        Sign In
+        {/* Sign In */}
+        <FalseButton btnType='navBtn' text='Login' />
       </div>
       <div className={styles.cartParent}>
         <Cart className={styles.icon} />
