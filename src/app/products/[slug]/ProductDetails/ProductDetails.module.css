@@ -98,12 +98,8 @@
 }
 
 .quantityInfoBox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   gap: 2rem;
-  margin-top: 2rem;
+  width: 100%;
 }
 
 .quantityInfo {

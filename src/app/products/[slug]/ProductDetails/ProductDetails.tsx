@@ -9,13 +9,14 @@ import ProductPrice from "../ProductPrice/ProductPrice";
 import ProductOptions from "../ProductOptions/ProductOptions";
 import Link from "next/link";
 import Plus from "../../../../../public/icons/plus.svg";
-// import AddToCartButton from "@/components/AddToCartButton/AddToCartButton";
+import AddToCartButton from "@/components/shared/AddToCartButton/AddToCartButton";
 
 interface ProductDetailsProps {
   product: products.Product;
 }
 
 export default function ProductDetails({ product }: ProductDetailsProps) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [quantity, setQuantity] = useState(1);
   const [showMore, setShowMore] = useState(false);
 
@@ -54,17 +55,17 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
   const availableQuantityExceeded =
     !!availableQuantity && quantity > availableQuantity;
 
-  const increaseQuantity = () => {
-    if (quantity < availableQuantity) {
-      setQuantity(quantity + 1);
-    }
-  };
+  // const increaseQuantity = () => {
+  //   if (quantity < availableQuantity) {
+  //     setQuantity(quantity + 1);
+  //   }
+  // };
 
-  const decreaseQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
+  // const decreaseQuantity = () => {
+  //   if (quantity > 1) {
+  //     setQuantity(quantity - 1);
+  //   }
+  // };
 
   // console.log(product);
 
@@ -93,15 +94,8 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
             <Plus className={styles.icon} />
           </div>
         </div>
-        {/* 
-        {product.description && (
-          <div
-            dangerouslySetInnerHTML={{ __html: product.description }}
-            className={styles.description}
-          />
-        )} */}
 
-        {/* {!!product.additionalInfoSections?.length && (
+        {!!product.additionalInfoSections?.length && (
           <>
             <p
               className={styles.readMore}
@@ -126,7 +120,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
               ))}
             </div>
           </>
-        )} */}
+        )}
 
         <ProductOptions
           product={product}
@@ -159,21 +153,28 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                     +
                   </button>
                 </div> */}
-                {/* {!!availableQuantity &&
-                (availableQuantityExceeded || availableQuantity < 10) && (
-                  <span className={styles.stockWarning}>
-                  Only {availableQuantity} left in stock
-                  </span>
-                  )} */}
+                {!!availableQuantity &&
+                  (availableQuantityExceeded || availableQuantity < 10) && (
+                    <span className={styles.stockWarning}>
+                      Only {availableQuantity} left in stock
+                    </span>
+                  )}
               </div>
-              {/* <div className={styles.btnContainer}>
+              <div className={styles.btnContainer}>
                 <AddToCartButton
                   product={product}
                   selectedOptions={selectedOptions}
                   quantity={quantity}
                 />
-              </div> */}
+              </div>
             </div>
+
+            {product.description && (
+              <div
+                dangerouslySetInnerHTML={{ __html: product.description }}
+                className={styles.description}
+              />
+            )}
           </>
         ) : (
           <button className={styles.outOfStockButton}>Out of stock</button>

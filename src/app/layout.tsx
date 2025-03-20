@@ -5,12 +5,11 @@ import {
   Barlow_Semi_Condensed,
 } from "next/font/google";
 import "./globals.css";
-// import { ModalProvider } from "@/context/ModalContext";
-// import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from "@/lib/constants";
 import localFont from "next/font/local";
 import { Nav } from "@/components/shared/Nav/Nav";
-import SmoothScroll from '../components/shared/SmoothScroll/SmoothScroll'
-// import { Toaster } from "react-hot-toast";
+import SmoothScroll from "../components/shared/SmoothScroll/SmoothScroll";
+import ReactQueryProvider from "./ReactQueryProvider";
+import { Toaster } from "react-hot-toast";
 
 const interTight = Inter_Tight({
   variable: "--interTight",
@@ -54,26 +53,25 @@ export default function RootLayout({
       <body
         className={`${interTight.variable} ${barlowCondensed.variable} ${barlowSemiCondensed.variable} ${NeubauGroteskNor.variable}`}
       >
-        {/* <ModalProvider> */}
-        {/* <Toaster
-          position='bottom-right'
-          toastOptions={{
-            className: "toastFont",
-            duration: 6000,
-            style: {
-              border: "2px solid #295f4e",
-              borderRadius: "50px",
-              textAlign: "center",
-              whiteSpace: "nowrap",
-            },
-          }}
-        /> */}
-        <SmoothScroll>
-          <Nav />
-          {children}
-
-        </SmoothScroll>
-        {/* </ModalProvider> */}
+        <ReactQueryProvider>
+          <Toaster
+            position='bottom-right'
+            toastOptions={{
+              className: "toastFont",
+              duration: 6000,
+              style: {
+                border: "2px solid #295f4e",
+                borderRadius: "50px",
+                textAlign: "center",
+                whiteSpace: "nowrap",
+              },
+            }}
+          />
+          <SmoothScroll>
+            <Nav />
+            {children}
+          </SmoothScroll>
+        </ReactQueryProvider>
       </body>
     </html>
   );

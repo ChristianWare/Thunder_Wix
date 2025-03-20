@@ -13,7 +13,7 @@ interface PageProps {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { slug } = await params; // Await params here
+  const { slug } = await params;
 
   const wixClient = await getWixServerClient();
   const product = await getProductBySlug(wixClient, slug);
@@ -41,7 +41,7 @@ export async function generateMetadata({
 }
 
 export default async function ProductPage({ params }: PageProps) {
-  const { slug } = await params; // Await params here
+  const { slug } = await params;
 
   const wixClient = await getWixServerClient();
   const product = await getProductBySlug(wixClient, slug);

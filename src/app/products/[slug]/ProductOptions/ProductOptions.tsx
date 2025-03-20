@@ -24,10 +24,8 @@ export default function ProductOptions({
         <fieldset key={option.name} className={styles.fieldset}>
           <legend className={styles.legend}>{option.name}</legend>
           <div className={styles.optionContainer}>
-            {/* For Size options, render FalseButtons instead of radio buttons */}
             {isSizeOption(option)
-              ? // Size options with FalseButtons
-                option.choices?.map((choice, index) => {
+              ? option.choices?.map((choice, index) => {
                   const sizeValue = choice.description || choice.value || "";
                   const isSelected =
                     selectedOptions[option.name || ""] === sizeValue;
