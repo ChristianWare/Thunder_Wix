@@ -2,9 +2,9 @@
 import React from "react";
 import { getRelatedProducts } from "@/wix-api/products";
 import { getWixServerClient } from "@/lib/wix-client.server";
-import Product from "@/components/Product/Product";
+import ProductCard from "@/components/shared/ProductCard/ProductCard";
 import styles from "./RelatedProducts.module.css";
-import LayoutWrapper from "@/components/LayoutWrapper";
+import LayoutWrapper from "@/components/shared/LayoutWrapper";
 
 interface RelatedProductsProps {
   productId: string;
@@ -25,10 +25,10 @@ export default async function RelatedProducts({
   return (
     <LayoutWrapper>
       <div className={styles.content}>
-        <h2 className={styles.heading}>Browse more products</h2>
+        <h2 className={styles.heading}>Related </h2>
         <div className={styles.bottom}>
-          {relatedProducts.slice(0, 3).map((product) => (
-            <Product key={product._id} product={product} />
+          {relatedProducts.map((product) => (
+            <ProductCard key={product._id} product={product} />
           ))}
         </div>
       </div>

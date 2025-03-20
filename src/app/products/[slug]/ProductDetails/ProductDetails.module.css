@@ -167,9 +167,21 @@
   margin-top: 2rem;
 }
 
+@media screen and (max-width: 870px) {
+  .container {
+    margin-top: 5rem;
+    border-top: none;
+  }
+}
+
 @media screen and (max-width: 1068px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .right {
+    border: 1px solid var(--border);
+    padding: 2rem;
   }
 }
 

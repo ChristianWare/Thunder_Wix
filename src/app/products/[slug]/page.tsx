@@ -8,6 +8,7 @@ import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
 import SignUp from "@/components/shared/SignUp/SignUp";
 import Footer from "@/components/shared/Footer/Footer";
 import ParallaxArea from "@/components/home-page/ParallaxArea/ParallaxArea";
+import RelatedProducts from "./RelatedProducts/RelatedProducts";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -58,6 +59,7 @@ export default async function ProductPage({ params }: PageProps) {
       </LayoutWrapper>
       <ParallaxArea />
       <FinalCTA />
+      <RelatedProducts productId={product._id} />
       <SignUp />
       <Footer />
     </main>

@@ -10,13 +10,19 @@ interface Props {
   disabled?: any;
 }
 
-const FalseButton: FC<Props> = ({ text, btnType, onClick, disabled }) => {
+const FalseButton: FC<Props> = ({
+  text,
+  btnType,
+  onClick,
+  disabled,
+}) => {
   return (
     <button
-      className={`${styles.container} ${styles.btn} ${styles[btnType]}`}
+      className={`${styles.container} ${styles.btn} ${styles[btnType]} ${styles.pulseWrapper}`}
       onClick={onClick}
       disabled={disabled}
     >
+      <span className={styles.pulse} />
       {text}
     </button>
   );

@@ -63,8 +63,8 @@ export default function ProductMedia({ media }: ProductMediaProps) {
             mediaIdentifier={selectedImage.url}
             alt={selectedImage.altText || "Product Image"}
             // scaletofill={false}
-            width={1000}
-            height={1000}
+            width={900}
+            height={900}
             className={styles.img}
           />
         ) : selectedVideo?.url ? (
