@@ -25,11 +25,35 @@
   width: 100%;
   transition: all 0.2s ease-in;
 }
-
 .primary {
   color: var(--white);
   background-color: var(--red);
   border: 1px solid var(--red);
+}
+
+.primaryii {
+  color: var(--white);
+  background-color: var(--black);
+  border: 1px solid var(--black);
+  padding: 1rem 3rem;
+}
+
+.primaryii:hover {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.primaryiii {
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  padding: 1rem 3rem;
+}
+
+.primaryiii:hover {
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .secondary {
@@ -42,12 +66,6 @@
 .secondary:hover {
   color: var(--black);
   background-color: var(--white);
-}
-
-.secondaryii {
-  color: var(--white);
-  border: 1px solid var(--gold);
-  background-color: var(--darkGray);
 }
 
 .navBtn {

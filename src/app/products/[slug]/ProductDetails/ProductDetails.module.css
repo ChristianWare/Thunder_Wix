@@ -6,16 +6,24 @@
   margin-top: -5rem;
 }
 
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-left: 1px solid var(--border);
+  padding-top: 2rem;
+  padding-left: 2rem;
+  gap: 3rem;
+}
+
 .productName {
   font-size: 5.5rem;
   letter-spacing: -1px;
-  margin-bottom: 1rem;
 }
 
 .productRibbon {
   opacity: 0.7;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
   border: 1px solid var(--black);
   border-radius: 50px;
   padding: 0.5rem 1.5rem;
@@ -27,14 +35,39 @@
   color: var(--white);
 }
 
-.right {
+.infoBoxes {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  border-left: 1px solid var(--border);
-  padding-top: 1.5rem;
-  padding-left: 1rem;
+  width: 100%;
+}
+
+.infoBox,
+.infoBoxii {
+  border: 1px solid var(--border);
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.infoBoxii {
+  border-top: none;
+}
+
+.infoBox:hover,
+.infoBoxii:hover {
+  background-color: var(--border);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--red);
 }
 
 .readMore {
@@ -59,7 +92,7 @@
 }
 
 .description {
-  color: #666;
+  color: var(--text);
   line-height: 1.5;
   margin-top: 2rem;
 }

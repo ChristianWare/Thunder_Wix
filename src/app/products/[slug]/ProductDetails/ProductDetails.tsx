@@ -8,6 +8,7 @@ import ProductMedia from "../ProductMedia/ProductMedia";
 import ProductPrice from "../ProductPrice/ProductPrice";
 import ProductOptions from "../ProductOptions/ProductOptions";
 import Link from "next/link";
+import Plus from "../../../../../public/icons/plus.svg";
 // import AddToCartButton from "@/components/AddToCartButton/AddToCartButton";
 
 interface ProductDetailsProps {
@@ -65,7 +66,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
     }
   };
 
-  console.log(product);
+  // console.log(product);
 
   return (
     <div className={styles.container}>
@@ -82,14 +83,25 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         </Link>
         <ProductPrice product={product} selectedVariant={selectedVariant} />
 
+        <div className={styles.infoBoxes}>
+          <div className={styles.infoBox}>
+            <span className={styles.infoTitle}>Size Guide</span>
+            <Plus className={styles.icon} />
+          </div>
+          <div className={styles.infoBoxii}>
+            <span className={styles.infoTitle}>Click and Collect</span>
+            <Plus className={styles.icon} />
+          </div>
+        </div>
+        {/* 
         {product.description && (
           <div
             dangerouslySetInnerHTML={{ __html: product.description }}
             className={styles.description}
           />
-        )}
+        )} */}
 
-        {!!product.additionalInfoSections?.length && (
+        {/* {!!product.additionalInfoSections?.length && (
           <>
             <p
               className={styles.readMore}
@@ -114,7 +126,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
               ))}
             </div>
           </>
-        )}
+        )} */}
 
         <ProductOptions
           product={product}
@@ -132,7 +144,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
               )}
             <div className={styles.quantityInfoBox}>
               <div className={styles.quantityInfo}>
-                <div className={styles.quantitySelector}>
+                {/* <div className={styles.quantitySelector}>
                   <button
                     onClick={decreaseQuantity}
                     className={styles.quantityButton}
@@ -146,7 +158,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                   >
                     +
                   </button>
-                </div>
+                </div> */}
                 {/* {!!availableQuantity &&
                 (availableQuantityExceeded || availableQuantity < 10) && (
                   <span className={styles.stockWarning}>
