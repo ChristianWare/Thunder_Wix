@@ -3,6 +3,7 @@
 import { useAdditemToCart } from "@/hooks/cart";
 import { products } from "@wix/stores";
 import FalseButton from "../FalseButton/FalseButton";
+import { useModal } from "@/context/ModalContext";
 
 interface AddToCartButtonProps {
   product: products.Product;
@@ -17,22 +18,21 @@ export default function AddToCartButton({
   ...props
 }: AddToCartButtonProps) {
   const mutation = useAdditemToCart();
+  const { setModalOpen } = useModal();
 
   return (
     <FalseButton
-      onClick={() =>
+      onClick={() => {
         mutation.mutate({
           product,
           selectedOptions,
           quantity,
-        })
-      }
+        });
+        setModalOpen(true);
+      }}
       btnType='primary'
       text='Add To Cart'
       {...props}
-      // className={`${styles.btn} ${styles.pulseWrapper}`}
-    >
-      {/* <span className={styles.pulse}></span> Add To Cart */}
-    </FalseButton>
+    />
   );
 }

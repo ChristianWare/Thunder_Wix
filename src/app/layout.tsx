@@ -10,6 +10,7 @@ import { Nav } from "@/components/shared/Nav/Nav";
 import SmoothScroll from "../components/shared/SmoothScroll/SmoothScroll";
 import ReactQueryProvider from "./ReactQueryProvider";
 import { Toaster } from "react-hot-toast";
+import { ModalProvider } from "../context/ModalContext";
 
 const interTight = Inter_Tight({
   variable: "--interTight",
@@ -67,10 +68,12 @@ export default function RootLayout({
               },
             }}
           />
-          <SmoothScroll>
-            <Nav />
-            {children}
-          </SmoothScroll>
+          <ModalProvider>
+            <SmoothScroll>
+              <Nav />
+              {children}
+            </SmoothScroll>
+          </ModalProvider>
         </ReactQueryProvider>
       </body>
     </html>
