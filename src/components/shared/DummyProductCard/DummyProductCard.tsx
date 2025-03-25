@@ -5,15 +5,16 @@ import Image, { StaticImageData } from "next/image";
 interface Props {
   title: string;
   src: StaticImageData;
+  href: string;
 }
 
-export default function DummyProductCard({ title, src }: Props) {
+export default function DummyProductCard({ title, src, href = "" }: Props) {
   return (
-    <Link href={"/"} className={styles.link}>
+    <Link href={href} className={styles.link}>
       <div className={styles.container}>
         <div className={styles.top}>
           <h3 className={styles.productName}>{title}</h3>
-          <span className={styles.model}>Guff</span>
+          <span className={styles.model}>E-Bikes</span>
         </div>
         <div className={styles.bottom}>
           <div className={styles.imgContainer}>
@@ -29,9 +30,9 @@ export default function DummyProductCard({ title, src }: Props) {
 
           <div className={styles.details}>
             <div className={styles.left}>
-              <div className={styles.strikeThrough}>$4,250.00 USD</div>
+              <div className={styles.strikeThrough}>$2,199</div>
               <div className={styles.price}>
-                <>$2,749</>
+                <>$1,199</>
               </div>
             </div>
             <div className={styles.right}>

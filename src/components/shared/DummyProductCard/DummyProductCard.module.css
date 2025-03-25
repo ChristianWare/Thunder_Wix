@@ -109,6 +109,9 @@
 
 .right {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .btn,
@@ -123,7 +126,8 @@
 
 .btnii {
   border: 1px solid var(--red);
-  color: var(--red);
+  background-color: var(--red);
+  color: var(--white);
 }
 
 @media screen and (max-width: 968px) {

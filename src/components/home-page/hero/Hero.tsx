@@ -4,8 +4,7 @@ import LayoutWrapper from "../../shared/LayoutWrapper";
 import ScrollHorizontalText from "../../shared/ScrollHorizontalText/ScrollHorizontalText";
 import Thunder from "../../../../public/icons/lightning.svg";
 import DummyProductCard from "@/components/shared/DummyProductCard/DummyProductCard";
-import Img1 from "../../../../public/images/model2.png";
-
+import Img1 from "../../../../public/images/heroBike.webp";
 
 export default function Hero() {
   return (
@@ -28,8 +27,9 @@ export default function Hero() {
             </div>
             <div className={styles.right}>
               <DummyProductCard
-                title='Turbo Vado 4.0 - Cast Black'
+                title='Radster™ Trail Electric Off-Road Bike'
                 src={Img1}
+                href='products/radster-trail-electric-off-road-bike'
               />
             </div>
           </div>

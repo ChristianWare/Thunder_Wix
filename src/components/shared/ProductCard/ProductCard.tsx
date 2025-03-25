@@ -31,7 +31,14 @@ export default function ProductCard({ product }: Props) {
           />
           <div className={styles.details}>
             <div className={styles.left}>
-              <div className={styles.strikeThrough}>$4,250.00 USD</div>
+              {product?.priceData?.formatted?.discountedPrice &&
+              product?.priceData?.formatted?.price &&
+              product?.priceData?.formatted?.discountedPrice !==
+                product?.priceData?.formatted?.price ? (
+                <div className={styles.strikeThrough}>
+                  {product?.priceData?.formatted?.price}
+                </div>
+              ) : null}{" "}
               <div className={styles.price}>
                 {/* {product.stock > 0 ? (
                   <>${product.price}</>
@@ -42,8 +49,14 @@ export default function ProductCard({ product }: Props) {
               </div>
             </div>
             <div className={styles.right}>
-              <div className={styles.btn}>new</div>
-              <div className={styles.btnii}>Sale</div>
+              <div className={styles.btn}>{product.ribbon}</div>
+              {/* <div className={styles.btnii}>Sale</div> */}
+              {product?.priceData?.formatted?.discountedPrice &&
+              product?.priceData?.formatted?.price &&
+              product?.priceData?.formatted?.discountedPrice !==
+                product?.priceData?.formatted?.price ? (
+                <div className={styles.btnii}>Sale</div>
+              ) : null}{" "}
             </div>
           </div>
         </div>

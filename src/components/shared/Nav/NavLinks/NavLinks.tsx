@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import styles from './NavLinks.module.css'
-import Logo from '../../Logo/Logo';
+import styles from "./NavLinks.module.css";
+import Logo from "../../Logo/Logo";
 import Link from "next/link";
 // import SearchBar from '../../SearchBar/SearchBar';
 import { useEffect, useState } from "react";
@@ -56,72 +56,72 @@ export default function NavLinks() {
       text: "Contact",
       href: "/contact",
     },
-    {
-      text: "Account",
-      href: "/account",
-    },
-    {
-      text: "Cart",
-      href: "/cart",
-    },
+    // {
+    //   text: "Account",
+    //   href: "/account",
+    // },
+    // {
+    //   text: "Cart",
+    //   href: "/cart",
+    // },
   ];
 
   return (
-      <nav className={styles.navbar}>
-        <div className={styles.left}>
-          {isOpen && (
-            <div
-              className={`${styles.overlay} ${
-                isOverlayVisible ? styles.visible : ""
-              }`}
-              onClick={() => {
-                setIsOpen(false);
-                setIsOverlayVisible(false);
-              }}
-            ></div>
-          )}
-          <span
-            className={
-              isOpen === false
-                ? styles.hamburger
-                : `${styles.hamburger} ${styles.active}`
-            }
-            onClick={openMenu}
-          >
-            <span className={styles.whiteBar}></span>
-            <span className={styles.whiteBar}></span>
-            <span className={styles.whiteBar}></span>
-          </span>
-          <Logo />
-        </div>
-        <div className={styles.right}>
-          <ul
-            className={
-              isOpen === false
-                ? styles.navMenu
-                : `${styles.navMenu} ${styles.active}`
-            }
-          >
-            {/* <div className={styles.searchContainer}>
+    <nav className={styles.navbar}>
+      <div className={styles.left}>
+        {isOpen && (
+          <div
+            className={`${styles.overlay} ${
+              isOverlayVisible ? styles.visible : ""
+            }`}
+            onClick={() => {
+              setIsOpen(false);
+              setIsOverlayVisible(false);
+            }}
+          ></div>
+        )}
+        <span
+          className={
+            isOpen === false
+              ? styles.hamburger
+              : `${styles.hamburger} ${styles.active}`
+          }
+          onClick={openMenu}
+        >
+          <span className={styles.whiteBar}></span>
+          <span className={styles.whiteBar}></span>
+          <span className={styles.whiteBar}></span>
+        </span>
+        <Logo />
+      </div>
+      <div className={styles.right}>
+        <ul
+          className={
+            isOpen === false
+              ? styles.navMenu
+              : `${styles.navMenu} ${styles.active}`
+          }
+        >
+          {/* <div className={styles.searchContainer}>
               <SearchBar closeMenu={() => setIsOpen(false)} />
             </div> */}
-            {navItems.map((navItem, index) => (
-              <li
-                key={index}
-                className={styles.navItemContainer}
-                onClick={() => setIsOpen(false)}
-              >
-                <Link href={navItem.href} className={styles.navItem}>
-                  {navItem.text}
-                </Link>
-                <Plus className={styles.plus} />
-              </li>
-            ))}
-          </ul>
-        </div>
-        {/* <div className={styles.navIconsContainer}>
+          {navItems.map((navItem, index) => (
+            <li
+              key={index}
+              className={styles.navItemContainer}
+              onClick={() => setIsOpen(false)}
+            >
+              <Link href={navItem.href} className={styles.navItem}>
+                {navItem.text}
+              </Link>
+              <Plus className={styles.plus} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      {/* <div className={styles.navIconsContainer}>
           <NavbarIcons />
         </div> */}
-      </nav>
+    </nav>
   );
 }
