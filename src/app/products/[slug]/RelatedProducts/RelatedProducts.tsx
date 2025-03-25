@@ -25,7 +25,7 @@ export default async function RelatedProducts({
   return (
     <LayoutWrapper>
       <div className={styles.content}>
-        <h2 className={styles.heading}>Related </h2>
+        <h2 className={styles.heading}>You May Also Like.... </h2>
         <div className={styles.bottom}>
           {relatedProducts.map((product) => (
             <ProductCard key={product._id} product={product} />
