@@ -18,6 +18,7 @@ export default function Highlights() {
               <DummyProductCard
                 title='Bern Brentwood 2.0 MIPS Helmet'
                 src={Img2}
+                href='/'
               />
             </div>
             {/* <div className={styles.bottom2}>

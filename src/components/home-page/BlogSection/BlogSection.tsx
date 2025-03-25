@@ -29,7 +29,7 @@ export default function BlogSection() {
       <LayoutWrapper>
         <div className={styles.content}>
           {data.map((x) => (
-            <DummyProductCard key={x.id} title={x.title} src={x.src} />
+            <DummyProductCard key={x.id} title={x.title} src={x.src} href='/' />
           ))}
         </div>
       </LayoutWrapper>
